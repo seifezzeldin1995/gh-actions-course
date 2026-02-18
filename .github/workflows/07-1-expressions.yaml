@@ -12,7 +12,7 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - name: [debug] Print Start-up 
+      - name: '[debug] Print Start-up' 
         if: ${{ inputs.debug }}
         run: |
           echo "triggered by: ${{ github.event_name }}"
