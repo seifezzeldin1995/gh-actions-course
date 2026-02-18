@@ -6,7 +6,7 @@ on:
     inputs:
       debug:
         type: boolean
-        default: "false"
+        default: false
 
 jobs:
   echo:
@@ -21,6 +21,6 @@ jobs:
           echo "Runner OS: ${{ runner.os }}"
       - name: '[debug] Print when triggered from main'
         if: ${{ inputs.debug && github.ref == 'refs/heads/main' }}
-          run: echo "This workflow was triggered from the main branch."
+          run: echo"This workflow was triggered from the main branch."
       - name: Greeting
-          run: echo "Hello, world!"
+          run: echo"Hello, world!"
