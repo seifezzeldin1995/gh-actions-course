@@ -29,3 +29,13 @@ jobs:
           OVERWRITTEN: "I am a step env var that overwriten at step level"
         run: |
           echo "Overwritten: ${{ env.OVERWRITTEN }}"
+
+  echo2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Environment Variable
+        run: |
+          echo "Workflow env var: ${{ env.WORKFLOW_VAR }}"
+          echo "Overwritten: ${{ env.OVERWRITTEN }}"
+
+
